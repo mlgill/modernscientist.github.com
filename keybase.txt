@@ -4,7 +4,7 @@ https://keybase.io/mlgill
 
 I hereby claim:
 
-  * I am an admin of http://modernscientst.com
+  * I am an admin of http://modernscientist.com
   * I am mlgill (https://keybase.io/mlgill) on keybase.
   * I have a public key with fingerprint 64D5 7A40 E2C2 1E49 EF96  F194 E45F 4767 96F8 74BB
 
