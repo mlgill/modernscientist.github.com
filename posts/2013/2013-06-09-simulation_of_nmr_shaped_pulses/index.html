@@ -436,7 +436,7 @@ init_mathjax();
   <nav role="navigation"><ul class="main-navigation">
   <li><a href="https://modernscientist.com/">Blog</a></li>
   
-    <li><a href="http://modernscientist.com/archives.html">Archives</a></li>
+    <li><a href="https://modernscientist.com/archives.html">Archives</a></li>
     <li><a href="https://michellelynngill.com">About/CV</a></li>
     <li><a href="https://resume.michellelynngill.com">Resume</a></li>
 
@@ -2858,7 +2858,7 @@ Relative speed up of 1 times for cython over the fortran function.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Joshua <a href="http://modernscientist.com/posts/2013/2013-06-09-simulation_of_nmr_shaped_pulses/#comment-926513659">reports</a> that on his system, this cython function is about 15% faster than fortran. In my hands, it is slightly slower. Most likely this can be attributed to differences in our systems and setup. Clearly, both functions offer some advantage over the vectorized numpy function, however.</p>
+<p>Joshua <a href="https://modernscientist.com/posts/2013/2013-06-09-simulation_of_nmr_shaped_pulses/#comment-926513659">reports</a> that on his system, this cython function is about 15% faster than fortran. In my hands, it is slightly slower. Most likely this can be attributed to differences in our systems and setup. Clearly, both functions offer some advantage over the vectorized numpy function, however.</p>
 
 </div>
 </div>
@@ -4893,7 +4893,7 @@ XOf/A5AwBQD/WAmJAAAAAElFTkSuQmCC
 
 </p>
 <hr>
-<p><em>Edit:</em> The original version of this notebook contained two errors. The <a href="https://gist.github.com/mlgill/5774126">first</a> involved the modification of NumPy ndarray views during matrix multiplication within the faster NumPy function. The <a href="http://modernscientist.com/posts/2013/2013-06-09-simulation_of_nmr_shaped_pulses/#comment-929405468">second</a> chose <code>vectorComponent</code> from the wrong axis at the conclusion of the faster NumPy function and in the Python wrapper that calls the Fortran function. This resulted in an inversion of the <em>y</em>-axis magnetization. Both errors have been corrected. Thanks to <a href="https://twitter.com/synapticarbors">Joshua Adelman</a> for catching the second error. A minor change to the matrix simplification calculation due to an update of the SymPy package was also made, however this change had no effect on the result.</p>
+<p><em>Edit:</em> The original version of this notebook contained two errors. The <a href="https://gist.github.com/mlgill/5774126">first</a> involved the modification of NumPy ndarray views during matrix multiplication within the faster NumPy function. The <a href="https://modernscientist.com/posts/2013/2013-06-09-simulation_of_nmr_shaped_pulses/#comment-929405468">second</a> chose <code>vectorComponent</code> from the wrong axis at the conclusion of the faster NumPy function and in the Python wrapper that calls the Fortran function. This resulted in an inversion of the <em>y</em>-axis magnetization. Both errors have been corrected. Thanks to <a href="https://twitter.com/synapticarbors">Joshua Adelman</a> for catching the second error. A minor change to the matrix simplification calculation due to an update of the SymPy package was also made, however this change had no effect on the result.</p>
 <p><em>Edit:</em> A Cython version of the propagator function provided by Joshua Adelman has been added above.</p>
 <p><em>This post was written in an IPython notebook, which can be downloaded <a href="https://github.com/mlgill/modernscientist.github.com/blob/master/notebooks/NMRShapedPulseSimulation.ipynb">here</a>, or viewed statically <a href="http://nbviewer.ipython.org/url/modernscientist.github.com/notebooks/NMRShapedPulseSimulation.ipynb">here</a>.</em> </p>
 <div class="footnote">
