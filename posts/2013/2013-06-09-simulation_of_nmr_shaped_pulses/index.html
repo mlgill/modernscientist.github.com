@@ -355,15 +355,15 @@ init_mathjax();
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="http://modernscientist.com/favicon.png" rel="icon">
-  <link href="http://modernscientist.com/theme/css/main.css" media="screen, projection"
+  <link href="http://themodernscientist.com/favicon.png" rel="icon">
+  <link href="http://themodernscientist.com/theme/css/main.css" media="screen, projection"
         rel="stylesheet" type="text/css">
-    <script src="http://modernscientist.com/theme/js/modernizr-2.0.js"></script>
-  <script src="http://modernscientist.com/theme/js/ender.js"></script>
-  <script src="http://modernscientist.com/theme/js/octopress.js" type="text/javascript"></script>
+    <script src="http://themodernscientist.com/theme/js/modernizr-2.0.js"></script>
+  <script src="http://themodernscientist.com/theme/js/ender.js"></script>
+  <script src="http://themodernscientist.com/theme/js/octopress.js" type="text/javascript"></script>
 
   <!--  -->
-    <!-- <link rel="stylesheet" href="http://modernscientist.com/theme/tipuesearch/tipuesearch_CUSTOM.css"> -->
+    <!-- <link rel="stylesheet" href="http://themodernscientist.com/theme/tipuesearch/tipuesearch_CUSTOM.css"> -->
   <!--  -->
 
   <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"
@@ -392,10 +392,10 @@ init_mathjax();
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 
-  <link href="http://modernscientist.com/theme/tipuesearch/tipuesearch_CUSTOM.css" rel="stylesheet">
+  <link href="http://themodernscientist.com/theme/tipuesearch/tipuesearch_CUSTOM.css" rel="stylesheet">
 
-      <script type="text/javascript" src="http://modernscientist.com/theme/tipuesearch/tipuesearch_set.js"></script>
-      <script type="text/javascript" src="http://modernscientist.com/theme/tipuesearch/tipuesearch.min.js"></script>
+      <script type="text/javascript" src="http://themodernscientist.com/theme/tipuesearch/tipuesearch_set.js"></script>
+      <script type="text/javascript" src="http://themodernscientist.com/theme/tipuesearch/tipuesearch.min.js"></script>
 
       <script>
       $(document).ready(function() {
@@ -404,7 +404,7 @@ init_mathjax();
           'show': 10,
           'newWindow': false,
           'showURL': false,
-          'contentLocation': 'http://modernscientist.com/tipuesearch_content.json'
+          'contentLocation': 'http://themodernscientist.com/tipuesearch_content.json'
         });
       });
       </script>
@@ -412,7 +412,7 @@ init_mathjax();
 
 
 
-  <script type="text/javascript" src="http://modernscientist.com/theme/bigfoot/bigfoot.js"></script>
+  <script type="text/javascript" src="http://themodernscientist.com/theme/bigfoot/bigfoot.js"></script>
   <script type="text/javascript">
       var bigfoot = $.bigfoot(
           {
@@ -423,22 +423,23 @@ init_mathjax();
           }
       );
   </script>
-  <link href="http://modernscientist.com/theme/bigfoot/bigfoot-number.css" rel="stylesheet" type="text/css">
+  <link href="http://themodernscientist.com/theme/bigfoot/bigfoot-number.css" rel="stylesheet" type="text/css">
 
 
 </head>
 <body>
   <header role="banner">
 <hgroup>
-  <h1><a href="http://modernscientist.com/">themodernscientist</a></h1>
+  <h1><a href="http://themodernscientist.com/">themodernscientist</a></h1>
     <h2>data scientist, biophysicist, mac-unix zealot, pythonista</h2>
 </hgroup>  </header>
   <nav role="navigation"><ul class="main-navigation">
-  <li><a href="http://modernscientist.com/">Blog</a></li>
+  <li><a href="http://themodernscientist.com/">Blog</a></li>
   
-    <li><a href="http://modernscientist.com/archives.html">Archives</a></li>
-    <li><a href="https://michellelynngill.com">About/CV</a></li>
-    <li><a href="https://resume.michellelynngill.com">Resume</a></li>
+    <li><a href="http://themodernscientist.com/archives.html">Archives</a></li>
+    <li><a href="http://michellelynngill.com">About</a></li>
+    <li><a href="http://resume.michellelynngill.com">Resume</a></li>
+    <li><a href="http://cv.michellelynngill.com">CV</a></li>
 
   
 </ul>
@@ -519,12 +520,11 @@ init_mathjax();
 <h2 id="Spectrometer-Implementation-and-Simulation-of-Shaped-Pulses">Spectrometer Implementation and Simulation of Shaped Pulses<a class="anchor-link" href="#Spectrometer-Implementation-and-Simulation-of-Shaped-Pulses">&#182;</a></h2><p>Due to the nature of spectrometer hardware, a shaped pulse is implemented as a large number ($N$ or <code>n_pulse</code> as used here) of rectangular pulses of length $\Delta t$, where the total pulse length, $\tau_{p}$, is equal to $N \Delta t$. The net rotation of the entire pulse is the product of the following five rotations about the <em>y</em>- and <em>z</em>-axes performed for each successive period $\Delta t$ at each relative frequency:</p>
 <p>$R(\tau_{p}) = \prod^{N}_{i=1} R_{z}(\phi_{i}) \space R_{y}(\theta_{i}) \space R_{z}(\alpha_{i}) \space R_{y}(-\theta_{i}) \space R_{z}(-\phi_{i})$</p>
 <p>where $\phi_{i}$, $\theta_{i}$, and $\alpha_{i}$ are the respective phase, tilt angle and effective rotation for each time $\Delta t$ in the pulse. This calculation and its derivation are described in equation 3.107 and surrounding text of <a href="http://www.palmer.hs.columbia.edu/protein_nmr_spectroscopy/index.html">Protein NMR Spectroscopy: Principles and Practice, Second Edition</a>. The rotation matrices are:</p>
-<p>$$\begin{eqnarray*}
+$$\begin{eqnarray*}
 R_{x}(\beta) = \left[ \begin{array}{ccc} 1 &amp; 0 &amp; 0 \\ 0 &amp; cos(\beta) &amp; -sin(\beta) \\ 0 &amp; sin(\beta) &amp; cos(\beta) \end{array} \right]\\
 R_{y}(\beta) = \left[ \begin{array}{ccc} cos(\beta) &amp; 0 &amp; sin(\beta) \\ 0 &amp; 1 &amp; 0 \\ -sin(\beta) &amp; 0 &amp; cos(\beta) \end{array} \right]\\
 R_{z}(\beta) = \left[ \begin{array}{ccc} cos(\beta) &amp; -sin(\beta) &amp; 0 \\ sin(\beta) &amp; cos(\beta) &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{array} \right]\\
-\end{eqnarray*}$$</p>
-<p>where $\beta$ is an arbitrary angle, as in equation 1.35 of the same text. ($R_{x}$ is shown only for completeness and is not used in the above calculation.)</p>
+\end{eqnarray*}$$<p>where $\beta$ is an arbitrary angle, as in equation 1.35 of the same text. ($R_{x}$ is shown only for completeness and is not used in the above calculation.)</p>
 <p>Note that, while the simulation in this notebook does consider the effects of resonance offset, it does not consider evolution during the pulse itself. Furthermore, this method will not work as implemented to simulate adiabatic pulses.</p>
 
 </div>
@@ -2218,7 +2218,7 @@ VgAAAABJRU5ErkJggg==
  
 
 </p>
-<p>None of my attempts at automatically vectorizing this function were successful.<sup id="fnref:sympytheano"><a class="footnote-ref" href="#fn:sympytheano" rel="footnote">1</a></sup> Since the matrix is only 3x3, it is not difficult to calculate each of the nine matrix elements. Their symbolic values can be determined by printing each element of the SymPy function. Note the use of SymPy's <code>simplify</code> function for algebraic simplification.</p>
+<p>None of my attempts at automatically vectorizing this function were successful.<sup id="fnref-sympytheano"><a class="footnote-ref" href="#fn-sympytheano">1</a></sup> Since the matrix is only 3x3, it is not difficult to calculate each of the nine matrix elements. Their symbolic values can be determined by printing each element of the SymPy function. Note the use of SymPy's <code>simplify</code> function for algebraic simplification.</p>
 <p>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2641,7 +2641,7 @@ Relative speed up of 3 times for fortran over the vectorized numpy function.
  
 
 </p>
-<p>As expected, this function is much faster than the original NumPy version. In this case, the speed increase over the improved NumPy version is rather modest.<sup id="fnref:numbacython"><a class="footnote-ref" href="#fn:numbacython" rel="footnote">2</a></sup> The relative speed of the fortran function will likely grow as the number of points increases, but this is also a lesson about spending time optimizing a particular technique before moving onto something more powerful. (If major improvements can be made to either of the subroutines, then there is also a lesson about being familiar with the nuances of a language.)</p>
+<p>As expected, this function is much faster than the original NumPy version. In this case, the speed increase over the improved NumPy version is rather modest.<sup id="fnref-numbacython"><a class="footnote-ref" href="#fn-numbacython">2</a></sup> The relative speed of the fortran function will likely grow as the number of points increases, but this is also a lesson about spending time optimizing a particular technique before moving onto something more powerful. (If major improvements can be made to either of the subroutines, then there is also a lesson about being familiar with the nuances of a language.)</p>
 <p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -2858,7 +2858,7 @@ Relative speed up of 1 times for cython over the fortran function.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Joshua <a href="http://modernscientist.com/posts/2013/2013-06-09-simulation_of_nmr_shaped_pulses/#comment-926513659">reports</a> that on his system, this cython function is about 15% faster than fortran. In my hands, it is slightly slower. Most likely this can be attributed to differences in our systems and setup. Clearly, both functions offer some advantage over the vectorized numpy function, however.</p>
+<p>Joshua <a href="http://themodernscientist.com/posts/2013/2013-06-09-simulation_of_nmr_shaped_pulses/#comment-926513659">reports</a> that on his system, this cython function is about 15% faster than fortran. In my hands, it is slightly slower. Most likely this can be attributed to differences in our systems and setup. Clearly, both functions offer some advantage over the vectorized numpy function, however.</p>
 
 </div>
 </div>
@@ -4893,17 +4893,17 @@ XOf/A5AwBQD/WAmJAAAAAElFTkSuQmCC
 
 </p>
 <hr>
-<p><em>Edit:</em> The original version of this notebook contained two errors. The <a href="https://gist.github.com/mlgill/5774126">first</a> involved the modification of NumPy ndarray views during matrix multiplication within the faster NumPy function. The <a href="http://modernscientist.com/posts/2013/2013-06-09-simulation_of_nmr_shaped_pulses/#comment-929405468">second</a> chose <code>vectorComponent</code> from the wrong axis at the conclusion of the faster NumPy function and in the Python wrapper that calls the Fortran function. This resulted in an inversion of the <em>y</em>-axis magnetization. Both errors have been corrected. Thanks to <a href="https://twitter.com/synapticarbors">Joshua Adelman</a> for catching the second error. A minor change to the matrix simplification calculation due to an update of the SymPy package was also made, however this change had no effect on the result.</p>
+<p><em>Edit:</em> The original version of this notebook contained two errors. The <a href="https://gist.github.com/mlgill/5774126">first</a> involved the modification of NumPy ndarray views during matrix multiplication within the faster NumPy function. The <a href="http://themodernscientist.com/posts/2013/2013-06-09-simulation_of_nmr_shaped_pulses/#comment-929405468">second</a> chose <code>vectorComponent</code> from the wrong axis at the conclusion of the faster NumPy function and in the Python wrapper that calls the Fortran function. This resulted in an inversion of the <em>y</em>-axis magnetization. Both errors have been corrected. Thanks to <a href="https://twitter.com/synapticarbors">Joshua Adelman</a> for catching the second error. A minor change to the matrix simplification calculation due to an update of the SymPy package was also made, however this change had no effect on the result.</p>
 <p><em>Edit:</em> A Cython version of the propagator function provided by Joshua Adelman has been added above.</p>
-<p><em>This post was written in an IPython notebook, which can be downloaded <a href="https://github.com/mlgill/modernscientist.github.com/blob/master/notebooks/NMRShapedPulseSimulation.ipynb">here</a>, or viewed statically <a href="http://nbviewer.ipython.org/url/modernscientist.github.com/notebooks/NMRShapedPulseSimulation.ipynb">here</a>.</em> </p>
+<p><em>This post was written in an IPython notebook, which can be downloaded <a href="https://github.com/modernscientist/modernscientist.github.com/blob/master/notebooks/NMRShapedPulseSimulation.ipynb">here</a>, or viewed statically <a href="http://nbviewer.ipython.org/url/modernscientist.github.com/notebooks/NMRShapedPulseSimulation.ipynb">here</a>.</em> </p>
 <div class="footnote">
 <hr>
 <ol>
-<li id="fn:sympytheano">
-<p>Ideally this function could be vectorized with something like SymPy's <a href="http://docs.sympy.org/dev/modules/utilities/lambdify.html">lambdify</a>, <a href="http://ojensen.wordpress.com/2010/08/10/fast-ufunc-ish-hydrogen-solutions/">autowrap</a>, or <a href="http://docs.sympy.org/0.7.0/modules/utilities/autowrap.html#ufuncify">ufuncify</a> functions or with the <a href="http://matthewrocklin.com/blog/work/2013/03/19/SymPy-Theano-part-1/">Theano</a> package. Unfortunately, <code>lambdify</code> isn't compatible with NumPy arrays. Likewise, <code>autowrap</code> isn't compatible with SymPy's <code>Matrix</code> function <a href="https://groups.google.com/forum/?fromgroups#!msg/sympy/Lo62rCmPTm8/G4GuHzp5wpQJ">yet</a>. I was unsuccessful in getting <code>unfuncify</code> to work with this case, and my MacBook Air doesn't have the graphics card necessary for GPU computing, so I didn't attempt to use Theano.&#160;<a class="footnote-backref" href="#fnref:sympytheano" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<li id="fn-sympytheano">
+<p>Ideally this function could be vectorized with something like SymPy's <a href="http://docs.sympy.org/dev/modules/utilities/lambdify.html">lambdify</a>, <a href="http://ojensen.wordpress.com/2010/08/10/fast-ufunc-ish-hydrogen-solutions/">autowrap</a>, or <a href="http://docs.sympy.org/0.7.0/modules/utilities/autowrap.html#ufuncify">ufuncify</a> functions or with the <a href="http://matthewrocklin.com/blog/work/2013/03/19/SymPy-Theano-part-1/">Theano</a> package. Unfortunately, <code>lambdify</code> isn't compatible with NumPy arrays. Likewise, <code>autowrap</code> isn't compatible with SymPy's <code>Matrix</code> function <a href="https://groups.google.com/forum/?fromgroups#!msg/sympy/Lo62rCmPTm8/G4GuHzp5wpQJ">yet</a>. I was unsuccessful in getting <code>unfuncify</code> to work with this case, and my MacBook Air doesn't have the graphics card necessary for GPU computing, so I didn't attempt to use Theano.&#160;<a class="footnote-backref" href="#fnref-sympytheano" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
-<li id="fn:numbacython">
-<p>It would also be interesting to compare the speed of these functions to versions implemented in <a href="http://numba.pydata.org">Numba</a> and <a href="http://www.cython.org">Cython</a>. My efforts at implementing this subroutine in Numba were not very successful and I'm not fond of C, so I decided to pass on Cython.&#160;<a class="footnote-backref" href="#fnref:numbacython" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<li id="fn-numbacython">
+<p>It would also be interesting to compare the speed of these functions to versions implemented in <a href="http://numba.pydata.org">Numba</a> and <a href="http://www.cython.org">Cython</a>. My efforts at implementing this subroutine in Numba were not very successful and I'm not fond of C, so I decided to pass on Cython.&#160;<a class="footnote-backref" href="#fnref-numbacython" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div></div>
@@ -4913,8 +4913,8 @@ XOf/A5AwBQD/WAmJAAAAAElFTkSuQmCC
     Posted by <span class="fn">Michelle Gill</span>
   </span>
 <time datetime="2013-06-09T15:35:00-04:00" pubdate>2013/06/09</time>  <span class="categories">
-    <a class="category" href="http://modernscientist.com/tag/science.html">science</a>
-    <a class="category" href="http://modernscientist.com/tag/python.html">python</a>
+    <a class="category" href="http://themodernscientist.com/tag/science.html">science</a>
+    <a class="category" href="http://themodernscientist.com/tag/python.html">python</a>
   </span>
 </p>    </footer>
   </article>
@@ -4924,7 +4924,7 @@ XOf/A5AwBQD/WAmJAAAAAElFTkSuQmCC
 
 <!--   <section>
       <h1>Search</h1></hr>
-      <form class="navbar-search" action="http://modernscientist.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="" name="q" id="tipue_search_input"><input type="submit" value="Go!"></form></li>
+      <form class="navbar-search" action="http://themodernscientist.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="" name="q" id="tipue_search_input"><input type="submit" value="Go!"></form></li>
   </section>
  -->
 
@@ -4932,19 +4932,19 @@ XOf/A5AwBQD/WAmJAAAAAElFTkSuQmCC
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
       <li class="post">
-          <a href="http://modernscientist.com/posts/2017/2017-06-11-weekend_hacks_my_very_deep_learning_box/">Weekend Hacks: My Own Deep Learning Box</a>
+          <a href="http://themodernscientist.com/posts/2017/2017-06-11-weekend_hacks_my_very_deep_learning_box/">Weekend Hacks: My Own Deep Learning Box</a>
       </li>
       <li class="post">
-          <a href="http://modernscientist.com/posts/2016/2016-10-02-blogging_oreillys_artificial_intelligence_conference/">Blogging O'Reilly's Artificial Intelligence Conference</a>
+          <a href="http://themodernscientist.com/posts/2016/2016-10-02-blogging_oreillys_artificial_intelligence_conference/">Blogging O'Reilly's Artificial Intelligence Conference</a>
       </li>
       <li class="post">
-          <a href="http://modernscientist.com/posts/2016/2016-09-28-prediction_of_zika_outbreaks/">Prediction of Zika Outbreaks</a>
+          <a href="http://themodernscientist.com/posts/2016/2016-09-28-prediction_of_zika_outbreaks/">Prediction of Zika Outbreaks</a>
       </li>
       <li class="post">
-          <a href="http://modernscientist.com/posts/2016/2016-07-24-git_commit_update_life/">git commit -m 'Update life'</a>
+          <a href="http://themodernscientist.com/posts/2016/2016-07-24-git_commit_update_life/">git commit -m 'Update life'</a>
       </li>
       <li class="post">
-          <a href="http://modernscientist.com/posts/2016/2016-07-17-pdLSR_pandas_aware_least_squares_regression/">pdLSR: Pandas-aware least squares regression</a>
+          <a href="http://themodernscientist.com/posts/2016/2016-07-17-pdLSR_pandas_aware_least_squares_regression/">pdLSR: Pandas-aware least squares regression</a>
       </li>
     </ul>
   </section>
@@ -4953,20 +4953,20 @@ XOf/A5AwBQD/WAmJAAAAAElFTkSuQmCC
 
   <section>
   <h1>Tags</h1>
-    <a href="http://modernscientist.com/tag/deep-learning.html">deep learning</a>
-    <a href="http://modernscientist.com/tag/artificial-intelligence.html">artificial intelligence</a>
-    <a href="http://modernscientist.com/tag/data-science.html">data science</a>
-    <a href="http://modernscientist.com/tag/machine-learning.html">machine learning</a>
-    <a href="http://modernscientist.com/tag/python.html">python</a>
-    <a href="http://modernscientist.com/tag/life.html">life</a>
-    <a href="http://modernscientist.com/tag/science.html">science</a>
-    <a href="http://modernscientist.com/tag/openscience.html">openscience</a>
-    <a href="http://modernscientist.com/tag/shell.html">shell</a>
-    <a href="http://modernscientist.com/tag/mac.html">mac</a>
-    <a href="http://modernscientist.com/tag/automation.html">automation</a>
-    <a href="http://modernscientist.com/tag/ios.html">ios</a>
-    <a href="http://modernscientist.com/tag/meta.html">meta</a>
-    <a href="http://modernscientist.com/tag/pets.html">pets</a>
+    <a href="http://themodernscientist.com/tag/deep-learning.html">deep learning</a>
+    <a href="http://themodernscientist.com/tag/artificial-intelligence.html">artificial intelligence</a>
+    <a href="http://themodernscientist.com/tag/data-science.html">data science</a>
+    <a href="http://themodernscientist.com/tag/machine-learning.html">machine learning</a>
+    <a href="http://themodernscientist.com/tag/python.html">python</a>
+    <a href="http://themodernscientist.com/tag/life.html">life</a>
+    <a href="http://themodernscientist.com/tag/science.html">science</a>
+    <a href="http://themodernscientist.com/tag/openscience.html">openscience</a>
+    <a href="http://themodernscientist.com/tag/shell.html">shell</a>
+    <a href="http://themodernscientist.com/tag/mac.html">mac</a>
+    <a href="http://themodernscientist.com/tag/automation.html">automation</a>
+    <a href="http://themodernscientist.com/tag/ios.html">ios</a>
+    <a href="http://themodernscientist.com/tag/meta.html">meta</a>
+    <a href="http://themodernscientist.com/tag/pets.html">pets</a>
   <!-- -->
   </section>
 
@@ -4983,9 +4983,9 @@ XOf/A5AwBQD/WAmJAAAAAElFTkSuQmCC
     <section>
         <h1>Social</h2>
         <ul>
-            <li><a href="https://www.twitter.com/modernscientist" target="_blank">Twitter</a></li>
+            <li><a href="http://www.twitter.com/modernscientist" target="_blank">Twitter</a></li>
             <li><a href="https://github.com/mlgill" target="_blank">Github</a></li>
-            <li><a href="https://stackoverflow.com/users/943044/mlgill" target="_blank">Stack Overflow</a></li>
+            <li><a href="http://stackoverflow.com/users/943044/mlgill" target="_blank">Stack Overflow</a></li>
             <li><a href="https://www.linkedin.com/in/michellelynngill" target="_blank">LinkedIn</a></li>
         </ul>
     </section>
