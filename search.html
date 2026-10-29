@@ -389,22 +389,22 @@ init_mathjax();
   </script>
 
 
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 
   <link href="https://modernscientist.com/theme/tipuesearch/tipuesearch_CUSTOM.css" rel="stylesheet">
 
       <script type="text/javascript" src="https://modernscientist.com/theme/tipuesearch/tipuesearch_set.js"></script>
+      <script type="text/javascript" src="https://modernscientist.com/tipuesearch_content.js"></script>
       <script type="text/javascript" src="https://modernscientist.com/theme/tipuesearch/tipuesearch.min.js"></script>
 
       <script>
       $(document).ready(function() {
         $('#tipue_search_input').tipuesearch({
-          'mode' : 'json',
+          'mode' : 'static',
           'show': 10,
           'newWindow': false,
-          'showURL': false,
-          'contentLocation': 'https://modernscientist.com/tipuesearch_content.js'
+          'showURL': false
         });
       });
       </script>
