@@ -1,0 +1,12 @@
+{
+  "name": "modernscientist-browser-regression",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "setup": "bash setup-browser.sh",
+    "test": "node run-search.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.64.0-alpha-1790635538000"
+  }
+}
